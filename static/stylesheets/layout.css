@@ -1,0 +1,39 @@
+/*
+    This Stylesheet is used to apply styling directly to the layout.html
+    Use this stylesheet when you want apply to all templates that use layout.html
+*/
+body {
+    background-image: url('https://source.unsplash.com/collection/327760/1600x900');
+    background-size: cover;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: ivory;
+    background-color: slategrey;
+    padding: 5px;
+}
+
+p, a {
+    font-size: 16px;
+    margin: 10px;
+}
+
+.main{
+    background-color: rgba(50, 50, 50, 0.2);
+    color: white;
+}
+
+.indent_10{
+    margin-left : 10px;
+}
+
+.center{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.shade{
+    background-color: rgba(50, 50, 50, 0.2);
+    color: white;
+}

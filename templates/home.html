@@ -1,0 +1,30 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+    <h3>SpaceX api thingy</h3>
+    <div class="center shade">
+        <p>number of elements : {{counter}}</p>
+        <br/>
+        <table class="center indent_10">
+            <tr><th>nr</th><th>mission name</th><th>mission id</th><th>upcoming</th><th>launch year</th><th>rocked id</th><th>rocket type</th></tr>
+        {% for element in list %}
+               <tr>
+                <td>{{ element.flight_number|e }}</td>
+                <td>{{ element.mission_name|e }}</td>
+                <td>{{ element.mission_id|e }}</td>
+                <td>{{ element.upcoming|e }}</td>
+                <td>{{ element.launch_year|e }}</td>
+                <td>{{ element.rocket.rocket_id|e }}</td>
+                <td>{{ element.rocket.rocket_type|e }}</td>
+                
+               </tr>
+        {% endfor %}
+        </table>
+    </div>
+    
+{% endblock %}
+
+{% block scripts %}
+    <script src="{{ url_for('static', filename='javascript/home.js') }}"></script>
+{% endblock %}
